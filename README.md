@@ -1,1 +1,3 @@
 # Upwise
+Upwise is your ultimate platform for technical interview preparation and skill growth.
+Practice coding challenges, tackle real-world tasks, and track your progress across algorithms, data structures, and system design. With interactive exercises, automated testing, and personalized learning paths, Upwise helps you learn efficiently and confidently, so you can ace interviews and advance your career.
