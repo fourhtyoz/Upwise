@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Backend for Upwise",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev": "node index.js",
     "test": "test"
   },
   "author": "",
