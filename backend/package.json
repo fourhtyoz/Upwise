@@ -1,5 +1,5 @@
 {
-    "name": "backend",
+    "name": "upwise_backend",
     "version": "0.0.1",
     "description": "Backend for Upwise",
     "private": true,
@@ -7,7 +7,8 @@
     "type": "module",
     "scripts": {
         "dev": "node index.js",
-        "test": "test"
+        "test": "test",
+        "prepare": "git config core.hooksPath .git-hooks || echo 'Not in a git repo'"
     },
     "author": "Nickle Sydney",
     "dependencies": {

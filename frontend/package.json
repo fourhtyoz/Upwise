@@ -1,5 +1,5 @@
 {
-    "name": "frontend",
+    "name": "upwise_frontend",
     "version": "0.0.1",
     "description": "Frontend for Upwise",
     "author": "Nickle Sydney",
@@ -8,7 +8,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint"
+        "lint": "eslint",
+        "prepare": "git config core.hookspath .git-hooks || echo 'Not in a git repo'"
     },
     "dependencies": {
         "next": "16.0.1",
