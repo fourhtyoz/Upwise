@@ -1,16 +1,16 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "Backend for Upwise",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "dev": "node index.js",
-    "test": "test"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^5.1.0"
-  }
+    "name": "backend",
+    "version": "0.0.1",
+    "description": "Backend for Upwise",
+    "private": true,
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "node index.js",
+        "test": "test"
+    },
+    "author": "Nickle Sydney",
+    "dependencies": {
+        "express": "^5.1.0"
+    }
 }
