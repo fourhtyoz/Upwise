@@ -1,0 +1,35 @@
+// Colors
+$primary-color: #0070f3;
+$secondary-color: #7928ca;
+$success-color: #17c964;
+$danger-color: #f31260;
+
+// Breakpoints
+$breakpoints: (
+    'sm': 640px,
+    'md': 768px,
+    'lg': 1024px,
+    'xl': 1280px,
+    '2xl': 1536px
+);
+
+// Spacing
+$spacing-unit: 0.25rem;
+$spacings: (
+    0: 0,
+    1: $spacing-unit,
+    2: $spacing-unit * 2,
+    3: $spacing-unit * 3,
+    4: $spacing-unit * 4,
+    8: $spacing-unit * 8,
+    12: $spacing-unit * 12,
+    16: $spacing-unit * 16
+);
+
+// CSS Custom Properties (CSS Variables)
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --border-radius: 0.5rem;
+    --transition-duration: 200ms;
+}

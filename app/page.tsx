@@ -1,3 +1,9 @@
+import { Button } from '@/components/shared/Button/Button';
+
 export default function Home() {
-    return <div>home</div>;
+    return (
+        <div>
+            <Button>Test</Button>
+        </div>
+    );
 }
