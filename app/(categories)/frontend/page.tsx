@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function FrontendPage() {
     return <div>FrontendPage</div>;

@@ -9,6 +9,7 @@
         "start": "next start",
         "lint": "eslint",
         "prepare": "husky",
+        "prettier": "npx prettier . --write",
         "db:generate": "npx prisma generate",
         "db:push": "npx prisma push",
         "db:ui": "npx prisma studio"

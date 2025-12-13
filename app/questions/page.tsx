@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function QuestionsPage() {
     return <div>QuestionsPage</div>;
