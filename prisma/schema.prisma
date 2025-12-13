@@ -1,0 +1,37 @@
+// --- base.prisma ---
+
+generator client {
+  provider        = "prisma-client"
+  output          = "../generated/prisma"
+  engineType      = "client"
+}
+
+datasource db {
+    provider = "postgresql"
+}
+
+
+// --- models/user.prisma ---
+
+enum Role {
+    ADMIN
+    MANAGER
+    USER
+    GUEST
+}
+
+model User {
+    id  Int @id @default(autoincrement())
+    email String @unique
+    username String @unique
+    firstName String?
+    lastName String?
+    password String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    role Role @default(USER)
+    isActive Boolean @default(true)
+
+    @@index([email, username])
+    @@map("users")
+}

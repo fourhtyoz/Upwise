@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs'); // eslint-disable-line
+const path = require('path'); // eslint-disable-line
 
-const schemasDir = path.join(__dirname, '../schema');
+const schemasDir = path.join(__dirname, '../schemas');
 const outputFile = path.join(__dirname, '../schema.prisma');
 
 function combineSchemas() {

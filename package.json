@@ -10,9 +10,9 @@
         "lint": "eslint",
         "prepare": "husky",
         "prettier": "npx prettier . --write",
-        "prisma:generate": "node prisma/scripts/combine-schemas.js && npx prisma generate",
-        "prisma:db-push": "node prisma/scripts/combine-schemas.js && npx prisma db push",
-        "prisma:migrate": "node prisma/scripts/combine-schemas.js && npx prisma migrate dev",
+        "prisma:generate": "node prisma/scripts/combine-schemas.js && npx prisma generate && rm prisma/schema.prisma",
+        "prisma:db-push": "node prisma/scripts/combine-schemas.js && npx prisma db push && rm prisma/schema.prisma",
+        "prisma:migrate": "node prisma/scripts/combine-schemas.js && npx prisma migrate dev && rm prisma/schema.prisma",
         "prisma:ui": "npx prisma studio"
     },
     "lint-staged": {
