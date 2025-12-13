@@ -4,7 +4,7 @@ import { verifyPassword, generateToken } from '@/lib/auth';
 import { z } from 'zod';
 
 const loginSchema = z.object({
-    email: z.email('Invalid email format').trim().toLowerCase(),
+    email: z.email('Invalid email format').trim(),
     password: z.string().min(6, 'Password must be at least 6 characters')
 });
 

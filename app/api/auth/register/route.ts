@@ -1,19 +1,43 @@
 import { generateToken, hashPassword } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
+
+const registerSchema = z.object({
+    email: z.email('Invalid email format').trim().toLowerCase(),
+    username: z.string().trim(),
+    firstName: z.string().optional(),
+    lastName: z.string().optional(),
+    password: z.string().min(6, 'Password must be at least 6 characters')
+});
 
 export async function POST(request: NextRequest) {
     try {
-        const { username, email, firstName, lastName, password } =
-            await request.json();
-        if (!username || !email || !password) {
+        let body;
+        try {
+            body = await request.json();
+        } catch {
             return NextResponse.json(
-                {
-                    error: 'Username, email & password are required or not valid'
-                },
+                { error: 'Invalid request format' },
                 { status: 400 }
             );
         }
+
+        const validation = registerSchema.safeParse(body);
+        if (!validation.success) {
+            const errors = validation.error.issues.map((err) => ({
+                field: err.path.join('.'),
+                message: err.message
+            }));
+
+            return NextResponse.json(
+                { error: 'Validation failed', details: errors },
+                { status: 400 }
+            );
+        }
+
+        const { email, username, firstName, lastName, password } =
+            validation.data;
 
         const emailExists = await prisma.user.findUnique({ where: { email } });
         if (emailExists) {
