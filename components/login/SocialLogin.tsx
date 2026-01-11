@@ -1,9 +1,10 @@
 import styles from './SocialLogin.module.scss';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 const socialProviders = [
-    { name: 'GitHub', icon: '🐙', color: '#333' },
-    { name: 'Google', icon: 'G', color: '#4285F4' },
-    { name: 'LinkedIn', icon: 'in', color: '#0077B5' }
+    { name: 'GitHub', icon: <FaGithub />, color: '#333' },
+    { name: 'Google', icon: <FaGoogle />, color: '#4285F4' }
+    // { name: 'LinkedIn', icon: 'in', color: '#0077B5' }
 ];
 
 export default function SocialLogin() {

@@ -19,9 +19,9 @@ export default function SignUpPage() {
                 <div className={styles.formPanel}>
                     <div className={styles.formContainer}>
                         <div className={styles.header}>
-                            <Link href="/" className={styles.logo}>
+                            {/* <Link href="/" className={styles.logo}>
                                 Upwise
-                            </Link>
+                            </Link> */}
                             <h1 className={styles.title}>Create Account</h1>
                             <p className={styles.subtitle}>
                                 Join thousands of developers mastering technical

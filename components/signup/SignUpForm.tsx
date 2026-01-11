@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from './SignUpForm.module.scss';
+import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 
 export default function SignUpForm() {
     const router = useRouter();
@@ -158,7 +159,7 @@ export default function SignUpForm() {
             </div>
 
             {errors.submit && (
-                <div className={styles.errorMessage}>⚠️ {errors.submit}</div>
+                <div className={styles.errorMessage}>{errors.submit}</div>
             )}
 
             {step === 1 ? (
@@ -166,7 +167,7 @@ export default function SignUpForm() {
                     <div className={styles.formRow}>
                         <div className={styles.formGroup}>
                             <div className={styles.inputWrapper}>
-                                <span className={styles.inputIcon}>👤</span>
+                                {/* <span className={styles.inputIcon}>👤</span> */}
                                 <input
                                     type="text"
                                     name="firstName"
@@ -179,14 +180,14 @@ export default function SignUpForm() {
                             </div>
                             {errors.firstName && (
                                 <div className={styles.errorMessage}>
-                                    ⚠️ {errors.firstName}
+                                    {errors.firstName}
                                 </div>
                             )}
                         </div>
 
                         <div className={styles.formGroup}>
                             <div className={styles.inputWrapper}>
-                                <span className={styles.inputIcon}>👤</span>
+                                {/* <span className={styles.inputIcon}>👤</span> */}
                                 <input
                                     type="text"
                                     name="lastName"
@@ -199,7 +200,7 @@ export default function SignUpForm() {
                             </div>
                             {errors.lastName && (
                                 <div className={styles.errorMessage}>
-                                    ⚠️ {errors.lastName}
+                                    {errors.lastName}
                                 </div>
                             )}
                         </div>
@@ -207,7 +208,7 @@ export default function SignUpForm() {
 
                     <div className={styles.formGroup}>
                         <div className={styles.inputWrapper}>
-                            <span className={styles.inputIcon}>✉️</span>
+                            {/* <span className={styles.inputIcon}>✉️</span> */}
                             <input
                                 type="email"
                                 name="email"
@@ -220,7 +221,7 @@ export default function SignUpForm() {
                         </div>
                         {errors.email && (
                             <div className={styles.errorMessage}>
-                                ⚠️ {errors.email}
+                                {errors.email}
                             </div>
                         )}
                     </div>
@@ -238,7 +239,7 @@ export default function SignUpForm() {
                 <>
                     <div className={styles.formGroup}>
                         <div className={styles.inputWrapper}>
-                            <span className={styles.inputIcon}>🔒</span>
+                            {/* <span className={styles.inputIcon}>🔒</span> */}
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 name="password"
@@ -254,12 +255,16 @@ export default function SignUpForm() {
                                 onClick={() => setShowPassword(!showPassword)}
                                 tabIndex={-1}
                             >
-                                {showPassword ? '🙈' : '👁️'}
+                                {showPassword ? (
+                                    <FaRegEyeSlash />
+                                ) : (
+                                    <FaRegEye />
+                                )}
                             </button>
                         </div>
                         {errors.password && (
                             <div className={styles.errorMessage}>
-                                ⚠️ {errors.password}
+                                {errors.password}
                             </div>
                         )}
 
@@ -315,7 +320,7 @@ export default function SignUpForm() {
 
                     <div className={styles.formGroup}>
                         <div className={styles.inputWrapper}>
-                            <span className={styles.inputIcon}>🔒</span>
+                            {/* <span className={styles.inputIcon}>🔒</span> */}
                             <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 name="confirmPassword"
@@ -333,12 +338,16 @@ export default function SignUpForm() {
                                 }
                                 tabIndex={-1}
                             >
-                                {showConfirmPassword ? '🙈' : '👁️'}
+                                {showConfirmPassword ? (
+                                    <FaRegEyeSlash />
+                                ) : (
+                                    <FaRegEye />
+                                )}
                             </button>
                         </div>
                         {errors.confirmPassword && (
                             <div className={styles.errorMessage}>
-                                ⚠️ {errors.confirmPassword}
+                                {errors.confirmPassword}
                             </div>
                         )}
                     </div>
@@ -365,7 +374,7 @@ export default function SignUpForm() {
                     </div>
                     {errors.agreeToTerms && (
                         <div className={styles.errorMessage}>
-                            ⚠️ {errors.agreeToTerms}
+                            {errors.agreeToTerms}
                         </div>
                     )}
 

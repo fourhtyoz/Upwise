@@ -74,7 +74,7 @@ export default function LoginForm({ styles }: LoginFormProps) {
     return (
         <form onSubmit={handleSubmit} className={styles.form}>
             {errors.submit && (
-                <div className={styles.errorMessage}>⚠️ {errors.submit}</div>
+                <div className={styles.errorMessage}>{errors.submit}</div>
             )}
 
             <div className={styles.formGroup}>
@@ -91,13 +91,13 @@ export default function LoginForm({ styles }: LoginFormProps) {
                     />
                 </div>
                 {errors.email && (
-                    <div className={styles.errorMessage}>⚠️ {errors.email}</div>
+                    <div className={styles.errorMessage}>{errors.email}</div>
                 )}
             </div>
 
             <div className={styles.formGroup}>
                 <div className={styles.inputWrapper}>
-                    <span className={styles.inputIcon}>🔒</span>
+                    {/* <span className={styles.inputIcon}>🔒</span> */}
                     <input
                         type="password"
                         name="password"
@@ -109,9 +109,7 @@ export default function LoginForm({ styles }: LoginFormProps) {
                     />
                 </div>
                 {errors.password && (
-                    <div className={styles.errorMessage}>
-                        ⚠️ {errors.password}
-                    </div>
+                    <div className={styles.errorMessage}>{errors.password}</div>
                 )}
             </div>
 
