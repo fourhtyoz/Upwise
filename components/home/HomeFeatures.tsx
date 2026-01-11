@@ -1,38 +1,42 @@
 import styles from '@/app/page.module.scss';
+import { FaLaptopCode } from 'react-icons/fa';
+import { GiProgression, GiArcheryTarget } from 'react-icons/gi';
+import { ImBooks } from 'react-icons/im';
+import { FaPeopleGroup, FaBoltLightning } from 'react-icons/fa6';
 
 const features = [
     {
-        icon: '💻',
+        icon: <FaLaptopCode color="black" size={30} />,
         title: 'Curated Challenges',
         description:
             'Hand-picked problems from top tech companies with detailed solutions and explanations.'
     },
     {
-        icon: '📊',
+        icon: <GiProgression color="black" size={30} />,
         title: 'Progress Tracking',
         description:
             'Monitor your improvement with detailed analytics and personalized recommendations.'
     },
     {
-        icon: '🎯',
+        icon: <GiArcheryTarget color="black" size={30} />,
         title: 'Mock Interviews',
         description:
             'Practice with realistic interviews and get detailed feedback from experienced engineers.'
     },
     {
-        icon: '📚',
+        icon: <ImBooks color="black" size={30} />,
         title: 'Study Plans',
         description:
             'Structured learning paths tailored to your goals and timeline.'
     },
     {
-        icon: '👥',
+        icon: <FaPeopleGroup color="black" size={30} />,
         title: 'Community Support',
         description:
             'Learn together with a community of developers preparing for interviews.'
     },
     {
-        icon: '⚡',
+        icon: <FaBoltLightning color="black" size={30} />,
         title: 'Fast Feedback',
         description:
             'Get instant feedback on your solutions with our advanced testing system.'
