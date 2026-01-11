@@ -473,16 +473,6 @@
     line-height: 1.6;
     margin-bottom: var(--space-4);
     position: relative;
-
-    &::before {
-        content: '"';
-        font-size: 3rem;
-        color: var(--color-border);
-        position: absolute;
-        top: -10px;
-        left: -5px;
-        opacity: 0.5;
-    }
 }
 
 .testimonialAuthor {
