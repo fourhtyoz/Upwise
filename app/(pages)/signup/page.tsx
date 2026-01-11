@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SignUpForm from '@/components/signup/SignUpForm';
 import SocialLogin from '@/components/login/SocialLogin';
 import styles from './page.module.scss';
+import { FaRocket } from 'react-icons/fa';
 
 // export const metadata = {
 //     title: 'Sign Up - Upwise',
@@ -63,7 +64,9 @@ export default function SignUpPage() {
                     <div className={styles.previewContent}>
                         <div className={styles.previewCard}>
                             <div className={styles.cardHeader}>
-                                <div className={styles.cardIcon}>🚀</div>
+                                <div className={styles.cardIcon}>
+                                    <FaRocket />
+                                </div>
                                 <h3 className={styles.cardTitle}>
                                     Start Your Journey
                                 </h3>

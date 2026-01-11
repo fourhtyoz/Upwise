@@ -1,0 +1,128 @@
+.form {
+    .formGroup {
+        margin-bottom: var(--space-6);
+    }
+
+    .inputWrapper {
+        position: relative;
+    }
+
+    .input {
+        width: 100%;
+        padding: var(--space-4);
+        font-size: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        transition: all var(--transition-base);
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        &::placeholder {
+            color: var(--color-text-light);
+        }
+
+        &.error {
+            border-color: #ef4444;
+
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+            }
+        }
+    }
+
+    .inputIcon {
+        position: absolute;
+        left: var(--space-4);
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-text-light);
+        font-size: 1.25rem;
+    }
+
+    .errorMessage {
+        color: #ef4444;
+        font-size: 0.875rem;
+        margin-top: var(--space-2);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+    }
+
+    .rememberForgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-6);
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--space-3);
+        }
+    }
+
+    .rememberMe {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+
+        input[type='checkbox'] {
+            width: 16px;
+            height: 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            cursor: pointer;
+
+            &:checked {
+                background-color: var(--color-secondary);
+                border-color: var(--color-secondary);
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            }
+        }
+
+        label {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+    .submitButton {
+        width: 100%;
+        padding: var(--space-4);
+        background-color: var(--color-secondary);
+        color: white;
+        border: none;
+        border-radius: var(--radius-md);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-base);
+
+        &:hover:not(:disabled) {
+            background-color: var(--color-secondary-light);
+            transform: translateY(-1px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-secondary);
+            outline-offset: 2px;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}

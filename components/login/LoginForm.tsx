@@ -1,13 +1,10 @@
 'use client';
 
+import styles from './LoginPage.module.scss';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-interface LoginFormProps {
-    styles: any;
-}
-
-export default function LoginForm({ styles }: LoginFormProps) {
+export default function LoginForm() {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -79,7 +76,7 @@ export default function LoginForm({ styles }: LoginFormProps) {
 
             <div className={styles.formGroup}>
                 <div className={styles.inputWrapper}>
-                    <span className={styles.inputIcon}>✉️</span>
+                    {/* <span className={styles.inputIcon}>✉️</span> */}
                     <input
                         type="email"
                         name="email"

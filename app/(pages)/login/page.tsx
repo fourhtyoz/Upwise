@@ -4,6 +4,7 @@ import Link from 'next/link';
 import LoginForm from '@/components/login/LoginForm';
 import SocialLogin from '@/components/login/SocialLogin';
 import styles from './page.module.scss';
+import { FaLaptopCode } from 'react-icons/fa';
 
 // export const metadata = {
 //     title: 'Sign In - Upwise',
@@ -19,9 +20,9 @@ export default function LoginPage() {
                 <div className={styles.formPanel}>
                     <div className={styles.formContainer}>
                         <div className={styles.header}>
-                            <Link href="/" className={styles.logo}>
+                            {/* <Link href="/" className={styles.logo}>
                                 Upwise
-                            </Link>
+                            </Link> */}
                             <h1 className={styles.title}>Welcome Back</h1>
                             <p className={styles.subtitle}>
                                 Sign in to continue your interview preparation
@@ -29,7 +30,7 @@ export default function LoginPage() {
                             </p>
                         </div>
 
-                        <LoginForm styles={styles} />
+                        <LoginForm />
 
                         <div className={styles.divider}>
                             <span>Or continue with</span>
@@ -59,7 +60,9 @@ export default function LoginPage() {
                     <div className={styles.previewContent}>
                         <div className={styles.previewCard}>
                             <div className={styles.cardHeader}>
-                                <div className={styles.cardIcon}>💻</div>
+                                <div className={styles.cardIcon}>
+                                    <FaLaptopCode />
+                                </div>
                                 <h3 className={styles.cardTitle}>
                                     Master Coding Interviews
                                 </h3>
