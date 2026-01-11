@@ -55,7 +55,7 @@ export default function LoginPage() {
                     </div>
                 </div>
 
-                {/* Right Panel - Preview */}
+                {/* Right Panel - Pre§view */}
                 <div className={styles.previewPanel}>
                     <div className={styles.previewContent}>
                         <div className={styles.previewCard}>
