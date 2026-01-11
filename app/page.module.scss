@@ -240,7 +240,7 @@
 // Content Section
 .content {
     padding: var(--space-16) 0;
-    background-color: var(--color-bg-secondary);
+    // background-color: var(--color-bg-secondary);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
 
@@ -334,11 +334,11 @@
 // CTA Section
 .cta {
     padding: var(--space-16) 0;
-    background: linear-gradient(
-        135deg,
-        var(--color-bg-primary) 0%,
-        var(--color-bg-secondary) 100%
-    );
+    // background: linear-gradient(
+    //     135deg,
+    //     var(--color-bg-primary) 0%,
+    //     var(--color-bg-secondary) 100%
+    // );
     text-align: center;
 
     @media (max-width: 768px) {

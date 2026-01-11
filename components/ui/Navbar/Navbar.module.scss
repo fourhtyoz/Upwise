@@ -65,13 +65,13 @@
 }
 
 .navLink {
-    color: var(--text-secondary);
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
     padding: var(--spacing-xs) 0;
     position: relative;
-    transition: color var(--transition-fast);
+    transition: color var(--transition-slow);
 
     &::after {
         content: '';
@@ -79,13 +79,13 @@
         bottom: 0;
         left: 0;
         width: 0;
-        height: 2px;
-        background: var(--primary-color);
-        transition: width var(--transition-base);
+        height: 5px;
+        background: var(--color-secondary);
+        transition: width var(--transition-slow);
     }
 
     &:hover {
-        color: var(--primary-color);
+        color: var(--color-secondary);
 
         &::after {
             width: 100%;
@@ -109,33 +109,33 @@
 }
 
 .loginLink {
-    color: var(--text-secondary);
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: 4px;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
 
     &:hover {
-        color: var(--primary-color);
-        background: var(--bg-secondary);
+        color: var(--color-bg-primary);
+        background: var(--color-secondary);
     }
 }
 
 .getStarted {
-    color: var(--secondary-color);
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
     padding: var(--spacing-sm) var(--spacing-lg);
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--color-secondary);
     border-radius: 4px;
     transition: all var(--transition-base);
 
     &:hover {
-        background: var(--secondary-color);
-        color: white;
+        color: var(--color-bg-primary);
+        background: var(--color-secondary);
     }
 }
 
