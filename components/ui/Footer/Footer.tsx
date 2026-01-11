@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
+import { FaSquareXTwitter, FaSquareGithub } from 'react-icons/fa6';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -32,10 +33,16 @@ export default function Footer() {
     ];
 
     const socialLinks = [
-        { name: 'GitHub', icon: '🐙', url: 'https://github.com' },
-        { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' },
-        { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com' },
-        { name: 'YouTube', icon: '📺', url: 'https://youtube.com' }
+        {
+            name: 'GitHub',
+            icon: <FaSquareGithub color="black" size={30} />,
+            url: 'https://github.com'
+        },
+        {
+            name: 'Twitter',
+            icon: <FaSquareXTwitter color="black" size={30} />,
+            url: 'https://twitter.com'
+        }
     ];
 
     return (

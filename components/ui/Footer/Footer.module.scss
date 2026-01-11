@@ -82,19 +82,19 @@
 }
 
 .socialLink {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background: white;
-    border: 1px solid var(--footer-border);
-    text-decoration: none;
+    // display: inline-flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 40px;
+    // height: 40px;
+    // border-radius: 8px;
+    // background: white;
+    // border: 1px solid var(--footer-border);
+    // text-decoration: none;
     transition: all var(--transition-base);
 
     &:hover {
-        border-color: var(--accent-color);
+        // border-color: var(--accent-color);
         transform: translateY(-2px);
     }
 }
