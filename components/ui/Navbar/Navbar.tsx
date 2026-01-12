@@ -46,12 +46,15 @@ export default function Navbar() {
                     </ul>
 
                     <div className={styles.authSection}>
-                        <Link href="/login" className={styles.loginLink}>
+                        <Link
+                            href="/login"
+                            className={styles.highlightedButton}
+                        >
                             Sign In
                         </Link>
-                        <Link href="/signup" className={styles.getStarted}>
+                        {/* <Link href="/signup" className={styles.highlightedButton}>
                             Get Started
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
 
@@ -94,13 +97,13 @@ export default function Navbar() {
                         >
                             Sign In
                         </Link>
-                        <Link
+                        {/* <Link
                             href="/signup"
                             className={styles.mobileGetStarted}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Get Started
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

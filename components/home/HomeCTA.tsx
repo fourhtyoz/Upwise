@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styles from '@/app/page.module.scss';
+import styles from './HomeCTA.module.scss';
+import LinkButton from '../shared/LinkButton/LinkButton';
 
 export default function HomeCTA() {
     return (
@@ -11,9 +11,11 @@ export default function HomeCTA() {
                     their dream jobs with Upwise. No credit card required to get
                     started.
                 </p>
-                <Link href="/signup" className={styles.ctaButton}>
-                    Get Started Free
-                </Link>
+                <LinkButton
+                    href="/signup"
+                    text="Start Learning For Free"
+                    variant="primary"
+                />
             </div>
         </section>
     );

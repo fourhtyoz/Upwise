@@ -7,7 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     fullWidth?: boolean;
 }
 
-export function Button({
+export default function Button({
     variant = 'primary',
     size = 'medium',
     fullWidth = false,

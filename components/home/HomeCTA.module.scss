@@ -1,0 +1,76 @@
+// CTA Section
+.cta {
+    padding: var(--space-16) 0;
+    // background: linear-gradient(
+    //     135deg,
+    //     var(--color-bg-primary) 0%,
+    //     var(--color-bg-secondary) 100%
+    // );
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: var(--space-12) 0;
+    }
+}
+
+.ctaContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+.ctaTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--color-text-primary);
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.ctaDescription {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+        font-size: 1.125rem;
+    }
+}
+
+.ctaButton {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+
+    &:hover {
+        background-color: var(--color-secondary-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+// Responsive Utilities
+@media (max-width: 768px) {
+    .mobileFullWidth {
+        width: 100%;
+    }
+
+    .textCenterMobile {
+        text-align: center;
+    }
+
+    .stackMobile {
+        flex-direction: column;
+    }
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './LoginPage.module.scss';
+import styles from './LoginForm.module.scss';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 

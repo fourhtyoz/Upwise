@@ -1,4 +1,4 @@
-import styles from '@/app/page.module.scss';
+import styles from './HomeContent.module.scss';
 
 export default function HomeContent() {
     return (

@@ -1,4 +1,4 @@
-import styles from '@/app/page.module.scss';
+import styles from './HomeFeatures.module.scss';
 import { FaLaptopCode } from 'react-icons/fa';
 import { GiProgression, GiArcheryTarget } from 'react-icons/gi';
 import { ImBooks } from 'react-icons/im';
