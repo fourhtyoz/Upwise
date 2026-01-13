@@ -10,10 +10,10 @@ export default function Navbar() {
     const pathname = usePathname();
 
     const navItems = [
-        { name: 'Challenges', href: '/challenges' },
-        { name: 'Study Plan', href: '/study-plan' },
-        { name: 'Interviews', href: '/interviews' },
-        { name: 'Resources', href: '/resources' }
+        { name: 'Interview questions', href: '/questions' },
+        { name: 'Coding challenges', href: '/interviews' },
+        { name: 'Road maps', href: '/study-plan' },
+        { name: 'Books & Resources', href: '/resources' }
     ];
 
     const toggleMenu = () => {
