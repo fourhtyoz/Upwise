@@ -179,6 +179,7 @@
     right: 0;
     background: var(--color-bg-primary);
     border-top: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
     opacity: 0;
@@ -237,13 +238,15 @@
 }
 
 .mobileLogin {
-    color: var(--text-secondary);
+    // color: var(--text-secondary);
+    background: var(--color-secondary);
+    color: var(--color-filled-button);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     padding: var(--spacing-sm);
     text-align: center;
-    border-radius: 4px;
+    // border-radius: 4px;
     transition: all var(--transition-fast);
 
     &:hover {
