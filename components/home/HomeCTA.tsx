@@ -11,11 +11,7 @@ export default function HomeCTA() {
                     their dream jobs with Upwise. No credit card required to get
                     started.
                 </p>
-                <LinkButton
-                    href="/signup"
-                    text="Start Learning For Free"
-                    variant="primary"
-                />
+                <LinkButton href="/signup" text="Sign up" variant="primary" />
             </div>
         </section>
     );
