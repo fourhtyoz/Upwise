@@ -1,0 +1,272 @@
+.form {
+    .formRow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4);
+        margin-bottom: var(--space-4);
+
+        @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+        }
+    }
+
+    .formGroup {
+        margin-bottom: var(--space-6);
+    }
+
+    .inputWrapper {
+        position: relative;
+    }
+
+    .input {
+        width: 100%;
+        padding: var(--space-4);
+        font-size: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: 0;
+        background: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        transition: all var(--transition-base);
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        &::placeholder {
+            color: var(--color-text-light);
+        }
+
+        &.error {
+            border-color: #ef4444;
+
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+            }
+        }
+    }
+
+    .inputIcon {
+        position: absolute;
+        left: var(--space-4);
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-text-light);
+        font-size: 1.25rem;
+    }
+
+    .passwordToggle {
+        position: absolute;
+        right: var(--space-4);
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--color-text-light);
+        cursor: pointer;
+        padding: var(--space-1);
+
+        &:hover {
+            color: var(--color-text-primary);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-secondary);
+            outline-offset: 2px;
+        }
+    }
+
+    .errorMessage {
+        color: #ef4444;
+        font-size: 0.875rem;
+        margin-top: var(--space-2);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+    }
+
+    .passwordRequirements {
+        margin-top: var(--space-2);
+
+        .requirementTitle {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-2);
+        }
+
+        .requirementList {
+            list-style: none;
+            padding-left: var(--space-4);
+        }
+
+        .requirementItem {
+            font-size: 0.75rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-1);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+
+            &.valid {
+                color: var(--color-secondary);
+            }
+
+            &.invalid {
+                color: #ef4444;
+            }
+
+            .requirementIcon {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .termsAgreement {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-3);
+        margin-bottom: var(--space-6);
+
+        input[type='checkbox'] {
+            width: 16px;
+            height: 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            cursor: pointer;
+            margin-top: 3px;
+            flex-shrink: 0;
+
+            &:checked {
+                background-color: var(--color-secondary);
+                border-color: var(--color-secondary);
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            }
+        }
+
+        label {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            user-select: none;
+            line-height: 1.4;
+
+            a {
+                color: var(--color-secondary);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .submitButton {
+        width: 100%;
+        padding: var(--space-4);
+        background-color: var(--color-secondary);
+        color: var(--color-filled-button);
+        border: none;
+        // border-radius: var(--radius-md);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-base);
+
+        &:hover:not(:disabled) {
+            background-color: var(--color-secondary-light);
+            // transform: translateY(-1px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-secondary);
+            outline-offset: 2px;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    .backButton {
+        width: 100%;
+        padding: var(--space-4);
+        background-color: transparent;
+        color: var(--color-text-secondary);
+        border: 1px solid var(--color-border);
+        // border-radius: var(--radius-md);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all var(--transition-base);
+
+        &:hover:not(:disabled) {
+            border-color: var(--color-text-primary);
+            color: var(--color-text-primary);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    .formActions {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: var(--space-4);
+    }
+}
+
+// Loading State
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+
+    .spinner {
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Progress indicator
+.progressIndicator {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+
+    .step {
+        flex: 1;
+        height: 4px;
+        background: var(--color-border);
+        // border-radius: 2px;
+
+        &.active {
+            background: var(--color-secondary);
+        }
+
+        &.completed {
+            background: var(--color-secondary);
+        }
+    }
+}

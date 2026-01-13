@@ -1,9 +1,15 @@
-import { Button } from '@/components/shared/Button/Button';
+import HomeHero from '@/components/home/HomeHero';
+import HomeContent from '@/components/home/HomeContent';
+import HomeFeatures from '@/components/home/HomeFeatures';
+import HomeCTA from '@/components/home/HomeCTA';
 
-export default function Home() {
+export default function HomePage() {
     return (
-        <div>
-            <Button>Test</Button>
-        </div>
+        <>
+            <HomeHero />
+            <HomeFeatures />
+            {/* <HomeContent /> */}
+            <HomeCTA />
+        </>
     );
 }
