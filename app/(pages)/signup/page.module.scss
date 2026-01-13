@@ -347,17 +347,17 @@
     }
 }
 
-// Dark mode adjustments
-@media (prefers-color-scheme: dark) {
-    .registerPage {
-        background: var(--color-bg-primary);
-    }
+// // Dark mode adjustments
+// @media (prefers-color-scheme: dark) {
+//     .registerPage {
+//         background: var(--color-bg-primary);
+//     }
 
-    .previewPanel {
-        background: linear-gradient(
-            135deg,
-            var(--color-bg-tertiary) 0%,
-            #1a1f2e 100%
-        );
-    }
-}
+//     .previewPanel {
+//         background: linear-gradient(
+//             135deg,
+//             var(--color-bg-tertiary) 0%,
+//             #1a1f2e 100%
+//         );
+//     }
+// }
