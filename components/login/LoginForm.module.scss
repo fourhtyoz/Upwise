@@ -111,7 +111,7 @@
 
         &:hover:not(:disabled) {
             background-color: var(--color-secondary-light);
-            transform: translateY(-1px);
+            // transform: translateY(-1px);
         }
 
         &:focus-visible {
