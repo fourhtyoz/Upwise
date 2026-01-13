@@ -1,33 +1,78 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { FaSquareXTwitter, FaSquareGithub } from 'react-icons/fa6';
+import { ca } from 'zod/locales';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
-    const blogCategories = [
-        'Android',
-        'Backend',
-        'Data Science',
-        'Frontend',
-        'Game development',
-        'Machine learning',
-        'Testing'
+    const questions = [
+        {
+            title: 'Android',
+            url: '/android'
+        },
+        {
+            title: 'Backend',
+            url: '/backend'
+        },
+        {
+            title: 'Data Science',
+            url: '/data-science'
+        },
+        {
+            title: 'Devops',
+            url: '/devops'
+        },
+        {
+            title: 'Frontend',
+            url: '/frontend'
+        },
+        {
+            title: 'Game Development',
+            url: '/game-development'
+        },
+        {
+            title: 'Machine Learning',
+            url: '/machine-learning'
+        },
+        {
+            title: 'Testing',
+            url: '/testing'
+        }
     ];
 
     const roadMaps = [
-        'Backend',
-        'Frontend',
-        'Devops',
-        'Machine learning',
-        'Game development'
+        {
+            title: 'Android',
+            url: '/road-maps/android'
+        },
+        {
+            title: 'Backend',
+            url: '/road-maps/backend'
+        },
+        {
+            title: 'Data Science',
+            url: '/road-maps/data-science'
+        },
+        {
+            title: 'Devops',
+            url: '/road-maps/devops'
+        },
+        {
+            title: 'Game Development',
+            url: '/road-maps/game-development'
+        }
     ];
 
     const company = [
-        'About Us',
-        'Contact',
-        'Privacy Policy',
-        'Terms of Service'
+        {
+            title: 'About Us',
+            url: '/about'
+        },
+        {
+            title: 'Contact',
+            url: '/contact'
+        }
     ];
 
     const socialLinks = [
@@ -80,16 +125,16 @@ export default function Footer() {
                         <div className={styles.linksColumn}>
                             <h3 className={styles.columnTitle}>Questions</h3>
                             <ul className={styles.linksList}>
-                                {blogCategories.map((category) => (
+                                {questions.map((item) => (
                                     <li
-                                        key={category}
+                                        key={item.title}
                                         className={styles.linkItem}
                                     >
                                         <Link
-                                            href={`/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                                            href={`${item.url}`}
                                             className={styles.link}
                                         >
-                                            {category}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -99,16 +144,16 @@ export default function Footer() {
                         <div className={styles.linksColumn}>
                             <h3 className={styles.columnTitle}>Road Maps</h3>
                             <ul className={styles.linksList}>
-                                {roadMaps.map((resource) => (
+                                {roadMaps.map((item) => (
                                     <li
-                                        key={resource}
+                                        key={item.title}
                                         className={styles.linkItem}
                                     >
                                         <Link
-                                            href={`/resources/${resource.toLowerCase().replace(/\s+/g, '-')}`}
+                                            href={`${item.url}`}
                                             className={styles.link}
                                         >
-                                            {resource}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -119,12 +164,15 @@ export default function Footer() {
                             <h3 className={styles.columnTitle}>Company</h3>
                             <ul className={styles.linksList}>
                                 {company.map((item) => (
-                                    <li key={item} className={styles.linkItem}>
+                                    <li
+                                        key={item.title}
+                                        className={styles.linkItem}
+                                    >
                                         <Link
-                                            href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                                            href={`${item.url}`}
                                             className={styles.link}
                                         >
-                                            {item}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}

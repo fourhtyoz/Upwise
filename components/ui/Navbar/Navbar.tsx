@@ -12,7 +12,7 @@ export default function Navbar() {
     const navItems = [
         { name: 'Interview questions', href: '/questions' },
         { name: 'Coding challenges', href: '/challenges' },
-        { name: 'Road maps', href: '/roadmaps' },
+        { name: 'Road maps', href: '/road-maps' },
         { name: 'Books & Resources', href: '/resources' }
     ];
 
