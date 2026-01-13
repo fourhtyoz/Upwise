@@ -11,8 +11,8 @@ export default function Navbar() {
 
     const navItems = [
         { name: 'Interview questions', href: '/questions' },
-        { name: 'Coding challenges', href: '/interviews' },
-        { name: 'Road maps', href: '/study-plan' },
+        { name: 'Coding challenges', href: '/challenges' },
+        { name: 'Road maps', href: '/roadmaps' },
         { name: 'Books & Resources', href: '/resources' }
     ];
 

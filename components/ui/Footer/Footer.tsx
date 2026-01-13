@@ -6,27 +6,25 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     const blogCategories = [
-        'Algorithms',
-        'Data Structures',
-        'System Design',
-        'Interview Tips',
-        'Coding Challenges',
-        'Career Advice'
+        'Android',
+        'Backend',
+        'Data Science',
+        'Frontend',
+        'Game development',
+        'Machine learning',
+        'Testing'
     ];
 
-    const resources = [
-        'Study Guides',
-        'Practice Problems',
-        'Interview Questions',
-        'Code Examples',
-        'Video Tutorials',
-        'Community Forum'
+    const roadMaps = [
+        'Backend',
+        'Frontend',
+        'Devops',
+        'Machine learning',
+        'Game development'
     ];
 
     const company = [
         'About Us',
-        'Blog',
-        'Careers',
         'Contact',
         'Privacy Policy',
         'Terms of Service'
@@ -80,7 +78,7 @@ export default function Footer() {
                     {/* Links Columns */}
                     <div className={styles.linksGrid}>
                         <div className={styles.linksColumn}>
-                            <h3 className={styles.columnTitle}>Categories</h3>
+                            <h3 className={styles.columnTitle}>Questions</h3>
                             <ul className={styles.linksList}>
                                 {blogCategories.map((category) => (
                                     <li
@@ -99,9 +97,9 @@ export default function Footer() {
                         </div>
 
                         <div className={styles.linksColumn}>
-                            <h3 className={styles.columnTitle}>Resources</h3>
+                            <h3 className={styles.columnTitle}>Road Maps</h3>
                             <ul className={styles.linksList}>
-                                {resources.map((resource) => (
+                                {roadMaps.map((resource) => (
                                     <li
                                         key={resource}
                                         className={styles.linkItem}
