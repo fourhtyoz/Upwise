@@ -50,8 +50,7 @@
 
 .primary {
     background-color: var(--color-secondary);
-    // color: white;
-    color: black;
+    color: var(--color-filled-button);
     // border: 2px solid var(--color-secondary);
 
     &:hover {

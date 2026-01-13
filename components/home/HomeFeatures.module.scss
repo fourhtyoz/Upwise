@@ -8,6 +8,10 @@
     }
 }
 
+.icon {
+    color: var(--color-filled-button);
+}
+
 .featuresContainer {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -72,11 +76,12 @@
 .featureIcon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(
-        135deg,
-        var(--color-secondary),
-        var(--color-secondary-light)
-    );
+    background: var(--color-secondary);
+    // background: linear-gradient(
+    //     135deg,
+    //     var(--color-secondary),
+    //     var(--color-secondary-light)
+    // );
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;

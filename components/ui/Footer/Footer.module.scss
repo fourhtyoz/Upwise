@@ -4,6 +4,10 @@
     margin-top: auto; // Pushes footer to bottom if using flex layout
 }
 
+.icon {
+    color: var(--footer-icons);
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -176,7 +180,7 @@
 .newsletterButton {
     padding: var(--spacing-sm) var(--spacing-lg);
     background: var(--color-secondary);
-    color: black;
+    color: var(--color-filled-button);
     border: none;
     // border-radius: 6px;
     font-size: 0.95rem;

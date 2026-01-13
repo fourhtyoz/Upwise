@@ -35,12 +35,12 @@ export default function Footer() {
     const socialLinks = [
         {
             name: 'GitHub',
-            icon: <FaSquareGithub color="white" size={30} />,
+            icon: <FaSquareGithub className={styles.icon} size={30} />,
             url: 'https://github.com'
         },
         {
             name: 'Twitter',
-            icon: <FaSquareXTwitter color="white" size={30} />,
+            icon: <FaSquareXTwitter className={styles.icon} size={30} />,
             url: 'https://twitter.com'
         }
     ];

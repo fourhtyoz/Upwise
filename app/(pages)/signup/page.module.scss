@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-bg-secondary);
     padding: var(--space-6);
 }
 
@@ -147,11 +146,7 @@
 
 // Preview Panel
 .previewPanel {
-    background: linear-gradient(
-        135deg,
-        var(--color-bg-secondary) 0%,
-        var(--color-bg-tertiary) 100%
-    );
+    background: var(--color-secondary);
     padding: var(--space-12);
     display: flex;
     align-items: center;

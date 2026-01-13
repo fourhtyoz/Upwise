@@ -6,37 +6,37 @@ import { FaPeopleGroup, FaBoltLightning } from 'react-icons/fa6';
 
 const features = [
     {
-        icon: <FaLaptopCode color="black" size={30} />,
+        icon: <FaLaptopCode className={styles.icon} size={30} />,
         title: 'Curated Challenges',
         description:
             'Hand-picked problems from top tech companies with detailed solutions and explanations.'
     },
     {
-        icon: <GiProgression color="black" size={30} />,
+        icon: <GiProgression className={styles.icon} size={30} />,
         title: 'Progress Tracking',
         description:
             'Monitor your improvement with detailed analytics and personalized recommendations.'
     },
     {
-        icon: <GiArcheryTarget color="black" size={30} />,
+        icon: <GiArcheryTarget className={styles.icon} size={30} />,
         title: 'Mock Interviews',
         description:
             'Practice with realistic interviews and get detailed feedback from experienced engineers.'
     },
     {
-        icon: <ImBooks color="black" size={30} />,
+        icon: <ImBooks className={styles.icon} size={30} />,
         title: 'Study Plans',
         description:
             'Structured learning paths tailored to your goals and timeline.'
     },
     {
-        icon: <FaPeopleGroup color="black" size={30} />,
+        icon: <FaPeopleGroup className={styles.icon} size={30} />,
         title: 'Community Support',
         description:
             'Learn together with a community of developers preparing for interviews.'
     },
     {
-        icon: <FaBoltLightning color="black" size={30} />,
+        icon: <FaBoltLightning className={styles.icon} size={30} />,
         title: 'Fast Feedback',
         description:
             'Get instant feedback on your solutions with our advanced testing system.'

@@ -15,10 +15,25 @@
     --color-text-secondary: #4b5563;
     --color-text-tertiary: #6b7280;
     --color-text-light: #9ca3af;
+    --color-filled-button: #ffffff;
 
     // Borders & Dividers
     --color-border: #e5e7eb;
     --color-border-light: #f3f4f6;
+
+    // header
+    // TODO
+
+    // footer
+    --footer-bg: #f3f4f6;
+    --footer-border: #e5e7eb;
+    --footer-text-primary: #111827;
+    --footer-text-secondary: #6b7280;
+    --footer-text-light: #6b7280;
+    --footer-link-color: #6b7280;
+    --footer-link-hover: #111827;
+    --footer-accent-color: #2563eb;
+    --footer-icons: #000;
 
     // Shadows
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -64,19 +79,6 @@
     --header-height: 64px;
     --max-width: 1280px;
     --content-width: 768px; // Optimal reading width for blog content
-
-    // header
-    // TODO
-
-    // footer
-    --footer-bg: #0c0c0c;
-    --footer-border: #374151;
-    --footer-text-primary: #f9fafb;
-    --footer-text-secondary: #d1d5db;
-    --footer-text-light: #6b7280;
-    --footer-link-color: #9ca3af;
-    --footer-link-hover: #ffaa00;
-    --footer-accent-color: #ffaa00;
 }
 
 // Reset and Base Styles
@@ -397,19 +399,21 @@ button {
         --color-text-light: #6b7280;
         --color-border: #374151;
         --color-border-light: #4b5563;
+        --color-filled-button: #000;
 
         // header
         // TODO
 
         // footer
         --footer-bg: #0c0c0c;
-        --footer-border: #374151;
+        --footer-border: #4b5563;
         --footer-text-primary: #f9fafb;
         --footer-text-secondary: #d1d5db;
         --footer-text-light: #6b7280;
         --footer-link-color: #9ca3af;
         --footer-link-hover: #ffaa00;
         --footer-accent-color: #ffaa00;
+        --footer-icons: #fff;
 
         // Spacing
         --spacing-xs: 0.5rem;
