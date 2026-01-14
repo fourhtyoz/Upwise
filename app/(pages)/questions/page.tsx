@@ -136,6 +136,7 @@ function QuestionsPage() {
     const [selectedLanguage, setSelectedLanguage] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedQuestion, setExpandedQuestion] = useState(null);
+    const [showFilters, setShowFilters] = useState(false);
 
     // Filter questions based on all criteria
     const filteredQuestions = useMemo(() => {
@@ -242,78 +243,101 @@ function QuestionsPage() {
 
             {/* Filters */}
             <div className={styles.filters}>
-                <div className={styles.filterGroup}>
-                    <label className={styles.filterLabel}>Category</label>
-                    <div className={styles.filterButtons}>
-                        {CATEGORIES.map((category) => (
-                            <button
-                                key={category}
-                                className={`${styles.filterButton} ${selectedCategory === category ? styles.active : ''}`}
-                                onClick={() => setSelectedCategory(category)}
-                            >
-                                {category === 'all'
-                                    ? 'All Categories'
-                                    : category}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                {showFilters && (
+                    <>
+                        <div className={styles.filterGroup}>
+                            <label className={styles.filterLabel}>
+                                Category
+                            </label>
+                            <div className={styles.filterButtons}>
+                                {CATEGORIES.map((category) => (
+                                    <button
+                                        key={category}
+                                        className={`${styles.filterButton} ${selectedCategory === category ? styles.active : ''}`}
+                                        onClick={() =>
+                                            setSelectedCategory(category)
+                                        }
+                                    >
+                                        {category === 'all'
+                                            ? 'All Categories'
+                                            : category}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
 
-                <div className={styles.filterGroup}>
-                    <label className={styles.filterLabel}>
-                        Difficulty Level
-                    </label>
-                    <div className={styles.filterButtons}>
-                        {LEVELS.map((level) => (
-                            <button
-                                key={level}
-                                className={`${styles.filterButton} ${styles[`level-${level}`]} ${selectedLevel === level ? styles.active : ''}`}
-                                onClick={() => setSelectedLevel(level)}
-                            >
-                                {level === 'all' ? 'All Levels' : level}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                        <div className={styles.filterGroup}>
+                            <label className={styles.filterLabel}>
+                                Difficulty Level
+                            </label>
+                            <div className={styles.filterButtons}>
+                                {LEVELS.map((level) => (
+                                    <button
+                                        key={level}
+                                        className={`${styles.filterButton} ${styles[`level-${level}`]} ${selectedLevel === level ? styles.active : ''}`}
+                                        onClick={() => setSelectedLevel(level)}
+                                    >
+                                        {level === 'all' ? 'All Levels' : level}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
 
-                <div className={styles.filterGroup}>
-                    <label className={styles.filterLabel}>Company</label>
-                    <div className={styles.filterButtons}>
-                        {COMPANIES.map((company) => (
-                            <button
-                                key={company}
-                                className={`${styles.filterButton} ${selectedCompany === company ? styles.active : ''}`}
-                                onClick={() => setSelectedCompany(company)}
-                            >
-                                {company === 'all' ? 'All Companies' : company}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                        <div className={styles.filterGroup}>
+                            <label className={styles.filterLabel}>
+                                Company
+                            </label>
+                            <div className={styles.filterButtons}>
+                                {COMPANIES.map((company) => (
+                                    <button
+                                        key={company}
+                                        className={`${styles.filterButton} ${selectedCompany === company ? styles.active : ''}`}
+                                        onClick={() =>
+                                            setSelectedCompany(company)
+                                        }
+                                    >
+                                        {company === 'all'
+                                            ? 'All Companies'
+                                            : company}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
 
-                <div className={styles.filterGroup}>
-                    <label className={styles.filterLabel}>Language</label>
-                    <div className={styles.filterButtons}>
-                        {LANGUAGES.map((language) => (
-                            <button
-                                key={language}
-                                className={`${styles.filterButton} ${selectedLanguage === language ? styles.active : ''}`}
-                                onClick={() => setSelectedLanguage(language)}
-                            >
-                                {language === 'all'
-                                    ? 'All Languages'
-                                    : language}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
+                        <div className={styles.filterGroup}>
+                            <label className={styles.filterLabel}>
+                                Language
+                            </label>
+                            <div className={styles.filterButtons}>
+                                {LANGUAGES.map((language) => (
+                                    <button
+                                        key={language}
+                                        className={`${styles.filterButton} ${selectedLanguage === language ? styles.active : ''}`}
+                                        onClick={() =>
+                                            setSelectedLanguage(language)
+                                        }
+                                    >
+                                        {language === 'all'
+                                            ? 'All Languages'
+                                            : language}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </>
+                )}
                 <div className={styles.filterActions}>
+                    <button
+                        className={styles.clearButton}
+                        onClick={() => setShowFilters((prev) => !prev)}
+                    >
+                        {showFilters ? 'Hide Filters' : 'Show Filters'}
+                    </button>
                     <button
                         className={styles.clearButton}
                         onClick={clearFilters}
                     >
-                        Clear All Filters
+                        Clear Filters
                     </button>
                     <div className={styles.resultsCount}>
                         {filteredQuestions.length}{' '}
@@ -429,7 +453,7 @@ function QuestionsPage() {
                                             {question.answer}
                                         </p>
                                     </div>
-                                    <div className={styles.answerActions}>
+                                    {/* <div className={styles.answerActions}>
                                         <button className={styles.actionButton}>
                                             <svg
                                                 width="16"
@@ -473,7 +497,7 @@ function QuestionsPage() {
                                             </svg>
                                             Practice in Editor
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             )}
                         </div>
