@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { FaSquareXTwitter, FaSquareGithub } from 'react-icons/fa6';
-import { ca } from 'zod/locales';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -59,8 +58,20 @@ export default function Footer() {
             url: '/road-maps/devops'
         },
         {
+            title: 'Frontend',
+            url: '/road-maps/frontend'
+        },
+        {
             title: 'Game Development',
             url: '/road-maps/game-development'
+        },
+        {
+            title: 'Machine Learning',
+            url: '/road-mapsmachine-learning'
+        },
+        {
+            title: 'Testing',
+            url: '/road-maps/testing'
         }
     ];
 
