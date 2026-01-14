@@ -9,9 +9,9 @@ export default function AboutPage() {
                         Master Technical Interviews with Confidence
                     </h1>
                     <p className={styles.heroSubtitle}>
-                        At Upwise, we're on a mission to help software engineers
+                        {`At Upwise, we're on a mission to help software engineers
                         excel in technical interviews and build successful
-                        careers in tech.
+                        careers in tech.`}
                     </p>
                 </div>
             </div>
@@ -22,10 +22,10 @@ export default function AboutPage() {
                     <div className={styles.sectionHeader}>
                         <h2 className={styles.sectionTitle}>Our Mission</h2>
                         <p className={styles.sectionDescription}>
-                            We believe that technical interviews should be a
+                            {`We believe that technical interviews should be a
                             fair assessment of skills, not a memorization test.
                             Our goal is to demystify the interview process and
-                            provide the tools every engineer needs to succeed.
+                            provide the tools every engineer needs to succeed.`}
                         </p>
                     </div>
 
@@ -151,18 +151,18 @@ export default function AboutPage() {
                         <div className={styles.storyText}>
                             <h2 className={styles.sectionTitle}>Our Story</h2>
                             <p className={styles.sectionDescription}>
-                                Upwise was founded by a group of senior
+                                {`Upwise was founded by a group of senior
                                 engineers from FAANG companies who experienced
                                 firsthand the challenges and frustrations of
-                                technical interviews.
+                                technical interviews.`}
                             </p>
                             <p className={styles.sectionDescription}>
-                                We realized that while there were many resources
+                                {`We realized that while there were many resources
                                 available, most focused solely on coding
                                 problems without addressing the holistic
                                 interview experience. That's why we created
                                 Upwise - a comprehensive platform that prepares
-                                you for the entire interview journey.
+                                you for the entire interview journey.`}
                             </p>
                             <div className={styles.stats}>
                                 <div className={styles.statItem}>

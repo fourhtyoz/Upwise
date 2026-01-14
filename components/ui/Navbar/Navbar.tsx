@@ -10,10 +10,10 @@ export default function Navbar() {
     const pathname = usePathname();
 
     const navItems = [
-        { name: 'Interview questions', href: '/questions' },
-        { name: 'Coding challenges', href: '/challenges' },
-        { name: 'Road maps', href: '/road-maps' },
-        { name: 'Books & Resources', href: '/resources' }
+        { name: 'Interview questions', href: '/questions', isActive: true },
+        { name: 'Coding challenges', href: '/challenges', isActive: false },
+        { name: 'Road maps', href: '/road-maps', isActive: true },
+        { name: 'Books & Resources', href: '/resources', isActive: true }
     ];
 
     const toggleMenu = () => {
@@ -33,16 +33,22 @@ export default function Navbar() {
                 {/* Desktop Navigation */}
                 <div className={styles.desktopNav}>
                     <ul className={styles.navList}>
-                        {navItems.map((item) => (
-                            <li key={item.name} className={styles.navItem}>
-                                <Link
-                                    href={item.href}
-                                    className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
-                                >
-                                    {item.name}
-                                </Link>
-                            </li>
-                        ))}
+                        {navItems.map(
+                            (item) =>
+                                item.isActive && (
+                                    <li
+                                        key={item.name}
+                                        className={styles.navItem}
+                                    >
+                                        <Link
+                                            href={item.href}
+                                            className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                )
+                        )}
                     </ul>
 
                     <div className={styles.authSection}>
@@ -52,9 +58,6 @@ export default function Navbar() {
                         >
                             Sign In
                         </Link>
-                        {/* <Link href="/signup" className={styles.highlightedButton}>
-                            Get Started
-                        </Link> */}
                     </div>
                 </div>
 
@@ -97,13 +100,6 @@ export default function Navbar() {
                         >
                             Sign In
                         </Link>
-                        {/* <Link
-                            href="/signup"
-                            className={styles.mobileGetStarted}
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Get Started
-                        </Link> */}
                     </div>
                 </div>
             </div>
