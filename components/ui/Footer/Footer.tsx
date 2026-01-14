@@ -5,31 +5,85 @@ import { FaSquareXTwitter, FaSquareGithub } from 'react-icons/fa6';
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
-    const blogCategories = [
-        'Algorithms',
-        'Data Structures',
-        'System Design',
-        'Interview Tips',
-        'Coding Challenges',
-        'Career Advice'
+    const questions = [
+        {
+            title: 'Android',
+            url: '/android'
+        },
+        {
+            title: 'Backend',
+            url: '/backend'
+        },
+        {
+            title: 'Data Science',
+            url: '/data-science'
+        },
+        {
+            title: 'Devops',
+            url: '/devops'
+        },
+        {
+            title: 'Frontend',
+            url: '/frontend'
+        },
+        {
+            title: 'Game Development',
+            url: '/game-development'
+        },
+        {
+            title: 'Machine Learning',
+            url: '/machine-learning'
+        },
+        {
+            title: 'Testing',
+            url: '/testing'
+        }
     ];
 
-    const resources = [
-        'Study Guides',
-        'Practice Problems',
-        'Interview Questions',
-        'Code Examples',
-        'Video Tutorials',
-        'Community Forum'
+    const roadMaps = [
+        {
+            title: 'Android',
+            url: '/road-maps/android'
+        },
+        {
+            title: 'Backend',
+            url: '/road-maps/backend'
+        },
+        {
+            title: 'Data Science',
+            url: '/road-maps/data-science'
+        },
+        {
+            title: 'Devops',
+            url: '/road-maps/devops'
+        },
+        {
+            title: 'Frontend',
+            url: '/road-maps/frontend'
+        },
+        {
+            title: 'Game Development',
+            url: '/road-maps/game-development'
+        },
+        {
+            title: 'Machine Learning',
+            url: '/road-mapsmachine-learning'
+        },
+        {
+            title: 'Testing',
+            url: '/road-maps/testing'
+        }
     ];
 
     const company = [
-        'About Us',
-        'Blog',
-        'Careers',
-        'Contact',
-        'Privacy Policy',
-        'Terms of Service'
+        {
+            title: 'About Us',
+            url: '/about'
+        },
+        {
+            title: 'Contact',
+            url: '/contact'
+        }
     ];
 
     const socialLinks = [
@@ -80,18 +134,18 @@ export default function Footer() {
                     {/* Links Columns */}
                     <div className={styles.linksGrid}>
                         <div className={styles.linksColumn}>
-                            <h3 className={styles.columnTitle}>Categories</h3>
+                            <h3 className={styles.columnTitle}>Questions</h3>
                             <ul className={styles.linksList}>
-                                {blogCategories.map((category) => (
+                                {questions.map((item) => (
                                     <li
-                                        key={category}
+                                        key={item.title}
                                         className={styles.linkItem}
                                     >
                                         <Link
-                                            href={`/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                                            href={`${item.url}`}
                                             className={styles.link}
                                         >
-                                            {category}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -99,18 +153,18 @@ export default function Footer() {
                         </div>
 
                         <div className={styles.linksColumn}>
-                            <h3 className={styles.columnTitle}>Resources</h3>
+                            <h3 className={styles.columnTitle}>Road Maps</h3>
                             <ul className={styles.linksList}>
-                                {resources.map((resource) => (
+                                {roadMaps.map((item) => (
                                     <li
-                                        key={resource}
+                                        key={item.title}
                                         className={styles.linkItem}
                                     >
                                         <Link
-                                            href={`/resources/${resource.toLowerCase().replace(/\s+/g, '-')}`}
+                                            href={`${item.url}`}
                                             className={styles.link}
                                         >
-                                            {resource}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -121,12 +175,15 @@ export default function Footer() {
                             <h3 className={styles.columnTitle}>Company</h3>
                             <ul className={styles.linksList}>
                                 {company.map((item) => (
-                                    <li key={item} className={styles.linkItem}>
+                                    <li
+                                        key={item.title}
+                                        className={styles.linkItem}
+                                    >
                                         <Link
-                                            href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                                            href={`${item.url}`}
                                             className={styles.link}
                                         >
-                                            {item}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}
