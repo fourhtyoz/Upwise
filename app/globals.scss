@@ -1,5 +1,7 @@
 :root {
     // Colors
+    // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --featured-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --color-primary: #111827;
     --color-primary-light: #374151;
     --color-secondary: #2563eb;
@@ -81,50 +83,51 @@
     --content-width: 768px; // Optimal reading width for blog content
 }
 
+// TODO: temporarily disabled
 // Dark Mode
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-primary: #f9fafb;
-        --color-primary-light: #e5e7eb;
-        --color-secondary: #ffaa00;
-        --color-secondary-light: #ffde9c;
-        --color-bg-primary: #0c0c0c;
-        --color-bg-secondary: #1f2937;
-        --color-bg-tertiary: #374151;
-        --color-text-primary: #f9fafb;
-        --color-text-secondary: #d1d5db;
-        --color-text-tertiary: #9ca3af;
-        --color-text-light: #6b7280;
-        --color-border: #374151;
-        --color-border-light: #4b5563;
-        --color-filled-button: #000;
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --color-primary: #f9fafb;
+//         --color-primary-light: #e5e7eb;
+//         --color-secondary: #ffaa00;
+//         --color-secondary-light: #ffde9c;
+//         --color-bg-primary: #0c0c0c;
+//         --color-bg-secondary: #1f2937;
+//         --color-bg-tertiary: #374151;
+//         --color-text-primary: #f9fafb;
+//         --color-text-secondary: #d1d5db;
+//         --color-text-tertiary: #9ca3af;
+//         --color-text-light: #6b7280;
+//         --color-border: #374151;
+//         --color-border-light: #4b5563;
+//         --color-filled-button: #000;
 
-        // header
-        // TODO
+//         // header
+//         // TODO
 
-        // footer
-        --footer-bg: #0c0c0c;
-        --footer-border: #4b5563;
-        --footer-text-primary: #f9fafb;
-        --footer-text-secondary: #d1d5db;
-        --footer-text-light: #6b7280;
-        --footer-link-color: #9ca3af;
-        --footer-link-hover: #ffaa00;
-        --footer-accent-color: #ffaa00;
-        --footer-icons: #fff;
+//         // footer
+//         --footer-bg: #0c0c0c;
+//         --footer-border: #4b5563;
+//         --footer-text-primary: #f9fafb;
+//         --footer-text-secondary: #d1d5db;
+//         --footer-text-light: #6b7280;
+//         --footer-link-color: #9ca3af;
+//         --footer-link-hover: #ffaa00;
+//         --footer-accent-color: #ffaa00;
+//         --footer-icons: #fff;
 
-        // Spacing
-        --spacing-xs: 0.5rem;
-        --spacing-sm: 0.75rem;
-        --spacing-md: 1rem;
-        --spacing-lg: 1.5rem;
-        --spacing-xl: 2rem;
-        --spacing-2xl: 3rem;
+//         // Spacing
+//         --spacing-xs: 0.5rem;
+//         --spacing-sm: 0.75rem;
+//         --spacing-md: 1rem;
+//         --spacing-lg: 1.5rem;
+//         --spacing-xl: 2rem;
+//         --spacing-2xl: 3rem;
 
-        // Transitions
-        --transition-base: 200ms ease;
-    }
-}
+//         // Transitions
+//         --transition-base: 200ms ease;
+//     }
+// }
 
 // Reset and Base Styles
 * {

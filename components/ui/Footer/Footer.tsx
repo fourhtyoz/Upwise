@@ -40,38 +40,38 @@ export default function Footer() {
         }
     ];
 
-    const roadMaps = [
+    const fields = [
         {
             title: 'Android',
-            url: '/road-maps/android'
+            url: '/fields/android'
         },
         {
             title: 'Backend',
-            url: '/road-maps/backend'
+            url: '/fields/backend'
         },
         {
             title: 'Data Science',
-            url: '/road-maps/data-science'
+            url: '/fields/data-science'
         },
         {
             title: 'Devops',
-            url: '/road-maps/devops'
+            url: '/fields/devops'
         },
         {
             title: 'Frontend',
-            url: '/road-maps/frontend'
+            url: '/fields/frontend'
         },
         {
             title: 'Game Development',
-            url: '/road-maps/game-development'
+            url: '/fields/game-development'
         },
         {
             title: 'Machine Learning',
-            url: '/road-mapsmachine-learning'
+            url: '/fields/machine-learning'
         },
         {
             title: 'Testing',
-            url: '/road-maps/testing'
+            url: '/fields/testing'
         }
     ];
 
@@ -155,7 +155,7 @@ export default function Footer() {
                         <div className={styles.linksColumn}>
                             <h3 className={styles.columnTitle}>Road Maps</h3>
                             <ul className={styles.linksList}>
-                                {roadMaps.map((item) => (
+                                {fields.map((item) => (
                                     <li
                                         key={item.title}
                                         className={styles.linkItem}
