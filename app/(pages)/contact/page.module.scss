@@ -14,9 +14,12 @@
 }
 
 .heroTitle {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: var(--featured-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
 }
