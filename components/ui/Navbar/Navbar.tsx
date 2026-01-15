@@ -12,7 +12,7 @@ export default function Navbar() {
     const navItems = [
         { name: 'Interview questions', href: '/questions', isActive: true },
         { name: 'Coding challenges', href: '/challenges', isActive: false },
-        { name: 'Road maps', href: '/road-maps', isActive: true },
+        { name: 'Fields', href: '/fields', isActive: true },
         { name: 'Books & Resources', href: '/resources', isActive: true }
     ];
 
